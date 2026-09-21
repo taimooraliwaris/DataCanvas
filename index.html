@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataCanvas</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-alt: #1f2937;
+        --primary: #60a5fa;
+        --secondary: #34d399;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #111827 55%, #0b1120);
+        color: var(--text);
+        display: grid;
+        place-items: center;
+      }
+
+      .card {
+        width: min(900px, 90vw);
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.5);
+        padding: 48px 36px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        background: rgba(96, 165, 250, 0.15);
+        color: var(--primary);
+        border: 1px solid rgba(96, 165, 250, 0.4);
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.06rem;
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .button {
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 12px 18px;
+        font-weight: 600;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .primary {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #03111b;
+      }
+
+      .secondary {
+        background: rgba(31, 41, 55, 0.9);
+        color: var(--text);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="badge">GitHub Pages Ready</div>
+      <h1>DataCanvas</h1>
+      <p>
+        This page was created so the GitHub Pages site has a valid root entry point and no longer returns a 404.
+        If you are using a custom build workflow, replace this landing page with your app output in the deployment source.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/taimooraliwaris/DataCanvas">View Repository</a>
+        <a class="button secondary" href="https://docs.github.com/en/pages">GitHub Pages Docs</a>
+      </div>
+    </main>
+  </body>
+</html>
